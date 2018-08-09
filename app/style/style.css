@@ -1,0 +1,5 @@
+.submit-button {
+  width: 12.5rem;
+  margin: 1.5rem 0 0 calc(calc(100% / 12) + 15px);
+  padding: 0.5rem 0;
+}
