@@ -6,10 +6,10 @@ export default class HouseService {
   constructor() {}
 
   get houses() {
-    return JSON.parse(JSON.stringify());
+    return JSON.parse(JSON.stringify(houses));
   }
 
-  addCar(formData) {
+  addHouse(formData) {
     houses.push(new House(...Array.from(formData.value())));
   }
 }

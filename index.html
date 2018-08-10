@@ -13,7 +13,7 @@
 
 <body>
   <div class='container-fluid'>
-    <form onsubmit="app.controllers.carController.addCar(event)" class='row mb-5 mt-5'>
+    <form id='car-form' onsubmit="app.controllers.carController.addCar(event)" class='row mb-5 mt-5'>
       <h1 class="col-11 offset-1 mb-3">Add a car</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="make">Make</label>
@@ -42,7 +42,7 @@
       <button type="submit" class='submit-button btn btn-outline-success'>Add Car</button>
     </form>
 
-    <form onsubmit="app.controllers.houseController.addHouse(event)" class='row'>
+    <form id='house-form' onsubmit="app.controllers.houseController.addHouse(event)" class='row'>
       <h1 class="col-11 offset-1 mb-3">Add a house</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="address">Address</label>
@@ -71,7 +71,7 @@
       <button type="submit" class='submit-button btn btn-outline-success'>Add House</button>
     </form>
 
-    <form onsubmit="app.controllers.jobController.addJob(event)" class="row mb-5 mt-5">
+    <form id='job-form' onsubmit="app.controllers.jobController.addJob(event)" class="row mb-5 mt-5">
       <h1 class="col-11 offset-1 mb-3">Add a job</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="company">Company</label>
@@ -97,26 +97,11 @@
         <label for="hours">Hours</label>
         <input type="text" class="form-control" id="hours" name="hours" placeholder="9AM-11AM" required>
       </div>
-      <div class="form-group col-md-5 offset-md-1">
-        <label for="imgURL-jobs">Image link</label>
-        <input id="imgURL-jobs" type="url" placeholder="https://example-url.com/image.jpg" class="form-control">
-      </div>
-      <div class='col-md-6 hidden-sm-down'></div>
       <button type='submit' class='submit-button btn btn-outline-success'>Add Job</button>
     </form>
 
-    <div class="row">
-      <div id="cars" class="row">
-        <!-- <div class="col-3">
-        <p>${car.make}</p>
-        <p>${car.model}</p>
-        <p>${car.price}</p>
-        <p>${car.year}</p>
-        <p>${car.color}</p>
-        <img src="${car.imgURL}" alt="somethingelse" />
-      </div> -->
-      </div>
-    </div>
+    <section class="row card-group" id='item-list'>
+    </section>
 
   </div>
   <script src="main.js" type="module"></script>
