@@ -13,7 +13,8 @@
 
 <body>
   <div class='container-fluid'>
-    <form onsubmit="app.controllers.carController.addCar(event)" class='row'>
+    <form onsubmit="app.controllers.carController.addCar(event)" class='row mb-5 mt-5'>
+      <h1 class="col-11 offset-1 mb-3">Add a car</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="make">Make</label>
         <input type="text" id='make' name="make" placeholder="Toyota" class='form-control' required>
@@ -35,10 +36,73 @@
         <input type="text" id='color' name="color" placeholder="Burgandy" class='form-control' required>
       </div>
       <div class="form-group col-md-5">
-        <label for="imgUrl">Image link</label>
-        <input type="url" id='imgUrl' name="imgUrl" placeholder="https://example-url.com/image.jpg" class='form-control' required>
+        <label for="imgURL">Image link</label>
+        <input type="url" id='imgURL' name="imgURL" placeholder="https://example-url.com/image.jpg" class='form-control' required>
       </div>
       <button type="submit" class='submit-button btn btn-outline-success'>Add Car</button>
+    </form>
+
+    <form onsubmit="app.controllers.houseController.addHouse(event)" class='row'>
+      <h1 class="col-11 offset-1 mb-3">Add a house</h1>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" placeholder="1444 S Entertainment Ave, Boise, ID" class="form-control" required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="square-footage">Square footage</label>
+        <input id="square-footage" name="square-footage" type="number" placeholder="1000" step="1" min="1" class="form-control" required>
+      </div>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="rooms">Number of rooms</label>
+        <input id="rooms" name="rooms" type="number" placeholder="5" step="1" min="0" class="form-control" required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="baths">Number of baths</label>
+        <input id="baths" name="baths" type="number" placeholder="3" step="1" min="0" class="form-control" required>
+      </div>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number" placeholder="$19999.99" step="0.01" class="form-control" required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="imgURL-house">Image link</label>
+        <input id="imgURL-house" name="imgURL" type="url" placeholder="https://example-url.com/image.jpg" class="form-control" required>
+      </div>
+      <button type="submit" class='submit-button btn btn-outline-success'>Add House</button>
+    </form>
+
+    <form onsubmit="app.controllers.jobController.addJob(event)" class="row mb-5 mt-5">
+      <h1 class="col-11 offset-1 mb-3">Add a job</h1>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="company">Company</label>
+        <input type="text" class="form-control" id="company" name="company" placeholder="ABC Inc." required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" name="location" placeholder="Denver, Colorado" required>
+      </div>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="salary">Yearly Salary</label>
+        <input type="number" class="form-control" id="salary" name="salary" placeholder="$65000" required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Janitor" required>
+      </div>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="benefits">Benefits</label>
+        <input type="text" class="form-control" id="benefits" name="benefits" placeholder="Dental, Medical" required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="hours">Hours</label>
+        <input type="text" class="form-control" id="hours" name="hours" placeholder="9AM-11AM" required>
+      </div>
+      <div class="form-group col-md-5 offset-md-1">
+        <label for="imgURL-jobs">Image link</label>
+        <input id="imgURL-jobs" type="url" placeholder="https://example-url.com/image.jpg" class="form-control">
+      </div>
+      <div class='col-md-6 hidden-sm-down'></div>
+      <button type='submit' class='submit-button btn btn-outline-success'>Add Job</button>
     </form>
 
     <div class="row">
@@ -49,7 +113,7 @@
         <p>${car.price}</p>
         <p>${car.year}</p>
         <p>${car.color}</p>
-        <img src="${car.imgUrl}" alt="somethingelse" />
+        <img src="${car.imgURL}" alt="somethingelse" />
       </div> -->
       </div>
     </div>
