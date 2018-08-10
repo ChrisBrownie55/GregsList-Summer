@@ -10,6 +10,6 @@ export default class HouseService {
   }
 
   addHouse(formData) {
-    houses.push(new House(...Array.from(formData.value())));
+    houses.push(new House(...Array.from(formData.values())));
   }
 }

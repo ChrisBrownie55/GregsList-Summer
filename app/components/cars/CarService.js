@@ -8,6 +8,6 @@ export default class CarService {
   }
 
   addCar(formData) {
-    cars.push(new Car(...Array.from(formData.value())));
+    cars.push(new Car(...Array.from(formData.values())));
   }
 }
