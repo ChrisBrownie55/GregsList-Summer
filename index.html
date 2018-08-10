@@ -12,8 +12,16 @@
 </head>
 
 <body>
-  <div class='container-fluid'>
-    <form id='car-form' onsubmit="app.controllers.carController.addCar(event)" class='row mb-5 mt-5'>
+  <main class='container-fluid' id='main-wrapper'>
+
+    <section class='row active'>
+      <h1>Categories</h1>
+      <button class='btn btn-link' onclick='app.controllers.selector.selectCategory("cars")'>Cars</button>
+      <button class='btn btn-link' onclick='app.controllers.selector.selectCategory("houses")'>Houses</button>
+      <button class='btn btn-link' onclick='app.controllers.selector.selectCategory("jobs")'>Jobs</button>
+    </section>
+
+    <form id='car-form' onsubmit="app.controllers.cars.addCar(event)" class='row mb-5 mt-5'>
       <h1 class="col-11 offset-1 mb-3">Add a car</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="make">Make</label>
@@ -42,7 +50,7 @@
       <button type="submit" class='submit-button btn btn-outline-success'>Add Car</button>
     </form>
 
-    <form id='house-form' onsubmit="app.controllers.houseController.addHouse(event)" class='row'>
+    <form id='house-form' onsubmit="app.controllers.houses.addHouse(event)" class='row mb-5 mt-5'>
       <h1 class="col-11 offset-1 mb-3">Add a house</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="address">Address</label>
@@ -71,7 +79,7 @@
       <button type="submit" class='submit-button btn btn-outline-success'>Add House</button>
     </form>
 
-    <form id='job-form' onsubmit="app.controllers.jobController.addJob(event)" class="row mb-5 mt-5">
+    <form id='job-form' onsubmit="app.controllers.jobs.addJob(event)" class="row mb-5 mt-5">
       <h1 class="col-11 offset-1 mb-3">Add a job</h1>
       <div class="form-group col-md-5 offset-md-1">
         <label for="company">Company</label>
@@ -103,7 +111,7 @@
     <section class="row card-group" id='item-list'>
     </section>
 
-  </div>
+  </main>
   <script src="main.js" type="module"></script>
 </body>
 

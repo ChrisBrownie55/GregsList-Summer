@@ -6,8 +6,9 @@
 
 form {
   overflow: hidden;
-  transition: height 0.2s;
+  transition: height 0.2s, margin 0.2s;
 }
 form:not(.active) {
-  height: 0;
+  height: 0 !important;
+  margin: 0 !important;
 }
