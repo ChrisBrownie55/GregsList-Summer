@@ -7,7 +7,7 @@ const categories = {
 export default class SelectorController {
   constructor() {}
 
-  selectCategory(category) {
+  selectCategory(event, category) {
     const categoryForm = categories[category];
     if (!categoryForm) {
       return;
@@ -18,6 +18,11 @@ export default class SelectorController {
       .forEach(form => form.classList.remove('active'));
     document.getElementById('item-list').innerHTML = '';
     categoryForm.classList.add('active');
+
+    event.target.parentNode
+      .querySelectorAll('.active')
+      .forEach(link => link.classList.remove('active'));
+    event.target.classList.add('active');
 
     window.app.controllers[category].setActive();
   }

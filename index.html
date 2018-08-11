@@ -14,15 +14,15 @@
 <body>
   <main class='container-fluid' id='main-wrapper'>
 
-    <section class='row active'>
+    <section class='row active' id='navigation'>
       <h1 class='w-100 text-center'>
         Categories
       </h1>
-      <h5 class='text-muted text-center font-weight-normal w-100 mb-5'>Select a category to explore</h5>
+      <h5 class='text-muted text-center font-weight-normal w-100'>Select a category to explore</h5>
       <div class='d-flex justify-content-center w-100'>
-        <button class='btn btn-link' onclick='app.controllers.selector.selectCategory("cars")'>Cars</button>
-        <button class='btn btn-link' onclick='app.controllers.selector.selectCategory("houses")'>Houses</button>
-        <button class='btn btn-link' onclick='app.controllers.selector.selectCategory("jobs")'>Jobs</button>
+        <button class='btn btn-link' onclick='app.controllers.selector.selectCategory(event, "cars")'>Cars</button>
+        <button class='btn btn-link' onclick='app.controllers.selector.selectCategory(event, "houses")'>Houses</button>
+        <button class='btn btn-link' onclick='app.controllers.selector.selectCategory(event, "jobs")'>Jobs</button>
       </div>
     </section>
 
@@ -116,7 +116,7 @@
       <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.jobs.showJobs()'>Show Jobs</button>
     </form>
 
-    <section class='row card-group' id='item-list'>
+    <section class='row d-flex flex-wrap justify-content-center mt-5' id='item-list'>
     </section>
 
   </main>

@@ -5,7 +5,7 @@ const jobService = new JobService();
 function drawJobs() {
   const jobs = jobService.jobs;
   document.getElementById('item-list').innerHTML = `
-    <h1>Jobs</h1>
+    <h1 class='w-100 font-weight-normal text-center'>Jobs</h1>
     ${jobs
       .map(
         job => `

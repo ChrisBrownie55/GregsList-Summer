@@ -5,14 +5,14 @@ let carService = new CarService();
 function drawCars() {
   const cars = carService.cars;
   document.getElementById('item-list').innerHTML = `
-    <h1>Cars</h1>
+    <h1 class='w-100 font-weight-normal text-center'>Cars</h1>
     ${cars
       .map(
         car => `
         <article class='card'>
-        <img src="${car.imgUrl}" class='card-img-top'
-          alt="image of ${car.make} ${car.model} ${car.year}"
-        />
+          <img src="${car.imgUrl}" class='card-img-top'
+            alt="image of ${car.make} ${car.model} ${car.year}"
+          />
           <ul class='list-item list-item-flush'>
             <li class='list-group-item'>
               <p>Make:</p>

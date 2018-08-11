@@ -5,14 +5,14 @@ let houseService = new HouseService();
 function drawHouses() {
   const houses = houseService.houses;
   document.getElementById('item-list').innerHTML = `
-    <h1>Houses</h1>
+    <h1 class='w-100 font-weight-normal text-center'>Houses</h1>
     ${houses
       .map(
         house => `
         <article class='card'>
-        <img src="${house.imgUrl}" class='card-img-top'
-          alt="image of a house"
-        />
+          <img src="${house.imgUrl}" class='card-img-top'
+            alt="image of a house"
+          />
           <ul class='list-item list-item-flush'>
             <li class='list-group-item'>
               <p>Address:</p>

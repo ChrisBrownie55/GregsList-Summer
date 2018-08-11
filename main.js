@@ -14,3 +14,14 @@ export default class App {
 }
 
 window.app = new App();
+
+const hideCategoryText = () => (
+  navigation.children[0].classList.add('hidden'),
+  navigation.children[1].classList.add('hidden'),
+  navigation
+    .querySelectorAll('.btn-link')
+    .forEach(btn => btn.removeEventListener('click', hideCategoryText))
+);
+navigation
+  .querySelectorAll('.btn-link')
+  .forEach(btn => btn.addEventListener('click', hideCategoryText));
