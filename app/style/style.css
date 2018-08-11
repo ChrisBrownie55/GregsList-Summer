@@ -1,14 +1,28 @@
-.submit-button {
+.form-button {
   width: 12.5rem;
-  margin: 1.5rem 0 0 calc(calc(100% / 12) + 15px);
+  margin-top: 1.5rem;
   padding: 0.5rem 0;
 }
 
 form {
   overflow: hidden;
   transition: height 0.2s, margin 0.2s;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 form:not(.active) {
   height: 0 !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
+}
+@media (max-width: 767px) {
+  form {
+    max-width: 35rem;
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
+.list-item {
+  padding-left: 0;
 }

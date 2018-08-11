@@ -48,6 +48,11 @@ export default class CarController {
     document.getElementById('car-form').classList.add('active');
   }
 
+  showCars() {
+    document.getElementById('car-form').classList.remove('active');
+    drawCars();
+  }
+
   addCar(triggeredEvent) {
     triggeredEvent.preventDefault();
     const form = triggeredEvent.target;

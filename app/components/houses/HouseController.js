@@ -48,6 +48,11 @@ export default class HouseController {
     document.getElementById('house-form');
   }
 
+  showHouses() {
+    document.getElementById('house-form').classList.remove('active');
+    drawHouses();
+  }
+
   addHouse(triggeredEvent) {
     triggeredEvent.preventDefault();
     const form = triggeredEvent.target;

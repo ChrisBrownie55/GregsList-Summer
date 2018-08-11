@@ -45,6 +45,11 @@ export default class JobController {
     document.getElementById('job-form');
   }
 
+  showJobs() {
+    document.getElementById('job-form').classList.remove('active');
+    drawJobs();
+  }
+
   addHouse(triggeredEvent) {
     triggeredEvent.preventDefault();
     const form = triggeredEvent.target;

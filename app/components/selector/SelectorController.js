@@ -16,6 +16,7 @@ export default class SelectorController {
     document
       .querySelectorAll('form.active')
       .forEach(form => form.classList.remove('active'));
+    document.getElementById('item-list').innerHTML = '';
     categoryForm.classList.add('active');
 
     window.app.controllers[category].setActive();
