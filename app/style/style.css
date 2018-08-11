@@ -31,7 +31,6 @@
 
 form {
   overflow: hidden;
-  transition: height 0.2s, margin 0.2s;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -50,4 +49,16 @@ p {
 }
 .list-item {
   padding-left: 0;
+}
+
+.w-20r {
+  width: 20rem;
+}
+.h-20r {
+  width: 20rem;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
 }

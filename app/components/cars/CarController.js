@@ -9,8 +9,10 @@ function drawCars() {
     ${cars
       .map(
         car => `
-        <article class='card'>
-          <img src="${car.imgUrl}" class='card-img-top'
+        <article class='card w-20r'>
+          <img
+            class="card-img-top h-20r w-100"
+            src="${car.imgUrl}"
             alt="image of ${car.make} ${car.model} ${car.year}"
           />
           <ul class='list-item list-item-flush'>
