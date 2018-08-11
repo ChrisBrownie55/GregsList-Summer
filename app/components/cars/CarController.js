@@ -9,31 +9,31 @@ function drawCars() {
     ${cars
       .map(
         car => `
-        <article class='card w-20r'>
+        <article class='card w-20r mx-2 my-2'>
           <img
-            class="card-img-top h-20r w-100"
+            class="card-img-top h-20r w-100 object-fit-cover"
             src="${car.imgUrl}"
             alt="image of ${car.make} ${car.model} ${car.year}"
           />
           <ul class='list-item list-item-flush'>
             <li class='list-group-item'>
-              <p>Make:</p>
+              <b>Make:</b>
               <p>${car.make}</p>
             </li>
             <li class='list-group-item'>
-              <p>Model:</p>
+              <b>Model:</b>
               <p>${car.model}</p>
             </li>
             <li class='list-group-item'>
-              <p>Price:</p>
+              <b>Price:</b>
               <p>${car.price}</p>
             </li>
             <li class='list-group-item'>
-              <p>Year:</p>
+              <b>Year:</b>
               <p>${car.year}</p>
             </li>
             <li class='list-group-item'>
-              <p>Color:</p>
+              <b>Color:</b>
               <p>${car.color}</p>
             </li>
           </ul>

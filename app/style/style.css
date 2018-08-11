@@ -55,10 +55,18 @@ p {
   width: 20rem;
 }
 .h-20r {
-  width: 20rem;
+  height: 20rem;
 }
 
 .list-group-item {
   display: flex;
   justify-content: space-between;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.object-fit-cover {
+  object-fit: cover;
 }

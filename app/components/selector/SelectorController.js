@@ -5,7 +5,9 @@ const categories = {
 };
 
 export default class SelectorController {
-  constructor() {}
+  constructor() {
+    this.initialDelay = true;
+  }
 
   selectCategory(event, category) {
     const categoryForm = categories[category];
@@ -17,13 +19,17 @@ export default class SelectorController {
       .querySelectorAll('form.active')
       .forEach(form => form.classList.remove('active'));
     document.getElementById('item-list').innerHTML = '';
-    categoryForm.classList.add('active');
+    setTimeout(
+      () => categoryForm.classList.add('active'),
+      this.initialDelay ? 250 : 0
+    );
+    this.initialDelay = false;
 
     event.target.parentNode
       .querySelectorAll('.active')
       .forEach(link => link.classList.remove('active'));
     event.target.classList.add('active');
 
-    window.app.controllers[category].setActive();
+    // window.app.controllers[category].setActive();
   }
 }
