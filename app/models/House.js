@@ -5,6 +5,6 @@ export default class House {
     this.rooms = rooms;
     this.baths = baths;
     this.price = price;
-    this.imgURL = imgURL;
+    this.imgUrl = imgURL;
   }
 }

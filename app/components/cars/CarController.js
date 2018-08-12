@@ -1,4 +1,5 @@
 import CarService from './CarService.js';
+import ListCard from '../ListCard.js';
 
 let carService = new CarService();
 
@@ -7,40 +8,20 @@ function drawCars() {
   document.getElementById('item-list').innerHTML = `
     <h1 class='w-100 font-weight-normal text-center'>Cars</h1>
     ${cars
-      .map(
-        car => `
-        <article class='card w-20r mx-2 my-2'>
-          <img
-            class="card-img-top h-20r w-100 object-fit-cover"
-            src="${car.imgUrl}"
-            alt="image of ${car.make} ${car.model} ${car.year}"
-          />
-          <ul class='list-item list-item-flush'>
-            <li class='list-group-item'>
-              <b>Make:</b>
-              <p>${car.make}</p>
-            </li>
-            <li class='list-group-item'>
-              <b>Model:</b>
-              <p>${car.model}</p>
-            </li>
-            <li class='list-group-item'>
-              <b>Price:</b>
-              <p>${car.price}</p>
-            </li>
-            <li class='list-group-item'>
-              <b>Year:</b>
-              <p>${car.year}</p>
-            </li>
-            <li class='list-group-item'>
-              <b>Color:</b>
-              <p>${car.color}</p>
-            </li>
-          </ul>
-        </article>
-      `
+      .map(car =>
+        ListCard(
+          [
+            ['Make', car.make],
+            ['Model', car.make],
+            ['Year', car.year],
+            ['Price', '$' + car.price],
+            ['Color', car.color]
+          ],
+          car.imgUrl
+        )
       )
-      .join('')}`;
+      .join('')}
+  `;
 }
 
 export default class CarController {

@@ -10,6 +10,6 @@ export default class JobService {
   }
 
   addJob(formData) {
-    houses.push(new Job(...Array.from(formData.values())));
+    jobs.push(new Job(...Array.from(formData.values())));
   }
 }

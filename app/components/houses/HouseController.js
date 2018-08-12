@@ -1,4 +1,5 @@
 import HouseService from './HouseService.js';
+import ListCard from '../ListCard.js';
 
 let houseService = new HouseService();
 
@@ -7,36 +8,17 @@ function drawHouses() {
   document.getElementById('item-list').innerHTML = `
     <h1 class='w-100 font-weight-normal text-center'>Houses</h1>
     ${houses
-      .map(
-        house => `
-        <article class='card'>
-          <img src="${house.imgUrl}" class='card-img-top'
-            alt="image of a house"
-          />
-          <ul class='list-item list-item-flush'>
-            <li class='list-group-item'>
-              <p>Address:</p>
-              <p>${house.address}</p>
-            </li>
-            <li class='list-group-item'>
-              <p>Square footages:</p>
-              <p>${house.squareFootage}</p>
-            </li>
-            <li class='list-group-item'>
-              <p>Rooms:</p>
-              <p>${house.rooms}</p>
-            </li>
-            <li class='list-group-item'>
-              <p>Baths:</p>
-              <p>${house.baths}</p>
-            </li>
-            <li class='list-group-item'>
-              <p>Price:</p>
-              <p>${house.price}</p>
-            </li>
-          </ul>
-        </article>
-      `
+      .map(house =>
+        ListCard(
+          [
+            ['Address', house.address],
+            ['Square Footage', house.squareFootage],
+            ['Rooms', house.rooms],
+            ['Baths', house.baths],
+            ['Price', '$' + house.price]
+          ],
+          house.imgUrl
+        )
       )
       .join('')}`;
 }

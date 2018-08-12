@@ -58,11 +58,6 @@ p {
   height: 20rem;
 }
 
-.list-group-item {
-  display: flex;
-  justify-content: space-between;
-}
-
 ul {
   margin-bottom: 0;
 }
