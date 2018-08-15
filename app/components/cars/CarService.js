@@ -1,13 +1,35 @@
 import Car from '../../models/Car.js';
 
-const cars = [];
+const carsAPI = axios.create({
+  baseURL: 'https://bcw-gregslist.herokuapp.com/api/cars/',
+  timeout: 3000
+});
 
 export default class CarService {
-  get cars() {
-    return JSON.parse(JSON.stringify(cars));
+  getCars() {
+    return carsAPI
+      .get()
+      .then(res => res.data.data.map(carData => new Car(carData)))
+      .catch(error => console.error(error));
+    // return JSON.parse(JSON.stringify(cars));
   }
 
   addCar(formData) {
-    cars.push(new Car(...Array.from(formData.values())));
+    let formObj = {};
+    for (const [key, value] of formData.entries()) {
+      formObj[key] = value;
+    }
+
+    const newCar = new Car(formObj);
+
+    return carsAPI.post('', newCar).catch(error => console.error(error));
+  }
+
+  deleteCar(id) {
+    return carsAPI.delete(id).catch(error => console.error(error));
+  }
+
+  updateCar(id, update) {
+    return carsAPI.put(id, update);
   }
 }

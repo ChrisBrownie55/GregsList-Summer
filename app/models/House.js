@@ -1,10 +1,10 @@
 export default class House {
-  constructor(address, squareFootage, rooms, baths, price, imgURL) {
-    this.address = address;
-    this.squareFootage = squareFootage;
-    this.rooms = rooms;
-    this.baths = baths;
-    this.price = price;
-    this.imgUrl = imgURL;
+  constructor(requestData) {
+    this.address = requestData.address;
+    this.squareFootage = requestData.squareFootage;
+    this.rooms = requestData.rooms;
+    this.baths = requestData.baths;
+    this.price = requestData.price;
+    this.imgUrl = requestData.imgUrl;
   }
 }

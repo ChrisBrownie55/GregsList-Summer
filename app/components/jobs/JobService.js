@@ -1,6 +1,10 @@
 import Job from '../../models/Job.js';
 
-const jobs = [];
+let jobs = [];
+const jobsAPI = axios.create({
+  baseURL: 'https://bcw-gregslist.herokuapp.com/api/jobs',
+  timeout: 3000
+});
 
 export default class JobService {
   constructor() {}

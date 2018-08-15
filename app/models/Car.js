@@ -1,10 +1,11 @@
 export default class Car {
-  constructor(make, model, year, price, color, imgUrl) {
-    this.make = make
-    this.model = model
-    this.year = year
-    this.price = price
-    this.color = color
-    this.imgUrl = imgUrl
+  constructor(requestData) {
+    this.make = requestData.make;
+    this.model = requestData.model;
+    this.year = requestData.year;
+    this.price = requestData.price;
+    this.description = requestData.description;
+    this.imgUrl = requestData.imgUrl;
+    this.id = requestData._id;
   }
 }

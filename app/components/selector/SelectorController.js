@@ -29,7 +29,5 @@ export default class SelectorController {
       .querySelectorAll('.active')
       .forEach(link => link.classList.remove('active'));
     event.target.classList.add('active');
-
-    // window.app.controllers[category].setActive();
   }
 }

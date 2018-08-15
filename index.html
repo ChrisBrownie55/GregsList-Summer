@@ -45,15 +45,17 @@
         <input type='text' id='price' name='price' placeholder='$2499.99' class='form-control' step='0.01' min='1' required>
       </div>
       <div class='form-group col-md-5 offset-md-1'>
-        <label for='color'>Color</label>
-        <input type='text' id='color' name='color' placeholder='Burgandy' class='form-control' required>
+        <label for='description'>Description</label>
+        <input type='text' id='description' name='description' placeholder='Burgandy' class='form-control' required>
       </div>
       <div class='form-group col-md-5'>
-        <label for='imgURL'>Image link</label>
-        <input type='url' id='imgURL' name='imgURL' placeholder='https://example-url.com/image.jpg' class='form-control' required>
+        <label for='imgUrl'>Image link</label>
+        <input type='url' id='imgUrl' name='imgUrl' placeholder='https://example-url.com/image.jpg' class='form-control' required>
       </div>
       <button type='submit' class='form-button btn btn-success ml-auto mr-4'>Add Car</button>
-      <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.cars.showCars()'>Show Cars</button>
+      <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.cars.showCars()'>Show
+        Cars
+      </button>
     </form>
 
     <form id='house-form' onsubmit='app.controllers.houses.addHouse(event)' class='row pb-1 mb-5 mt-5'>
@@ -79,11 +81,13 @@
         <input id='price' name='price' type='number' placeholder='$19999.99' step='0.01' class='form-control' required>
       </div>
       <div class='form-group col-md-5'>
-        <label for='imgURL-house'>Image link</label>
-        <input id='imgURL-house' name='imgURL' type='url' placeholder='https://example-url.com/image.jpg' class='form-control' required>
+        <label for='imgUrl-house'>Image link</label>
+        <input id='imgUrl-house' name='imgUrl' type='url' placeholder='https://example-url.com/image.jpg' class='form-control' required>
       </div>
       <button type='submit' class='form-button btn btn-success ml-auto mr-4'>Add House</button>
-      <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.houses.showHouses()'>Show Houses</button>
+      <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.houses.showHouses()'>Show
+        Houses
+      </button>
     </form>
 
     <form id='job-form' onsubmit='app.controllers.jobs.addJob(event)' class='row pb-1 mb-5 mt-5'>
@@ -113,13 +117,18 @@
         <input type='text' class='form-control' id='hours' name='hours' placeholder='9AM-11AM' required>
       </div>
       <button type='submit' class='form-button btn btn-success ml-auto mr-4'>Add Job</button>
-      <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.jobs.showJobs()'>Show Jobs</button>
+      <button type='button' class='form-button btn btn-outline-primary mr-auto' onclick='app.controllers.jobs.showJobs()'>Show
+        Jobs
+      </button>
     </form>
 
-    <section class='row d-flex flex-wrap justify-content-center mt-5' id='item-list'>
+    <section class='row d-flex flex-wrap justify-content-center mt-5 position-relative' id='item-list'>
     </section>
 
   </main>
+  <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   <script src='main.js' type='module'></script>
 </body>
 
