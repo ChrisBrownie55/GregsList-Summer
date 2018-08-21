@@ -1,7 +1,7 @@
 import Car from '../../models/Car.js';
 
 const carsAPI = axios.create({
-  baseURL: 'https://bcw-gregslist.herokuapp.com/api/cars/',
+  baseURL: '//localhost:3000/cars', // 'https://bcw-gregslist.herokuapp.com/api/cars/',
   timeout: 3000
 });
 
@@ -9,7 +9,7 @@ export default class CarService {
   getCars() {
     return carsAPI
       .get()
-      .then(res => res.data.data.map(carData => new Car(carData)))
+      .then(res => res.data.map(carData => new Car(carData)))
       .catch(error => console.error(error));
     // return JSON.parse(JSON.stringify(cars));
   }
